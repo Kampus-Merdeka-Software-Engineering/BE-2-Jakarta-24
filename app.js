@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // inisialisasi database dengan sequelize
 const sequelize = require("./config/sequalize");
-const { starSequalize } = require("./utils/sequelize");
+const { startSequelize } = require("./utils/sequelize");
 
 // import model
 const { drink } = require("./models/drinks-model");
@@ -25,6 +25,6 @@ app.use("./drink", drinkRouter);
 
 // inisialisasi server
 app.listen(port, async () => {
+  await startSequelize(sequelize);
   console.log("sever tunning on port $(port}");
-  await starsequalize(sequelize);
 });
