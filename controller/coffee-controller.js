@@ -1,4 +1,4 @@
-const { getALLDataMinuman } = require("../service/drink-service");
+const { getAllDataMinuman } = require("../service/drink-service");
 
 const getMinuman = async (req, res) => {
   let drinks = await getAllDataMinuman();

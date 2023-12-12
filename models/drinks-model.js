@@ -10,8 +10,9 @@ const Drink = sequalize.define("Drink", {
   title: DataTypes.STRING,
   price: DataTypes.INTEGER,
   description: DataTypes.STRING,
+  image: DataTypes.STRING,
   createdAt: DataTypes.DATE,
-  updateAt: DataTypes.DATE,
+  updatedAt: DataTypes.DATE,
 });
 
 module.exports = Drink;
