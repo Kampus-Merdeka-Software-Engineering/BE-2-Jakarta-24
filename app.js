@@ -21,10 +21,10 @@ const { drink } = require("./models/drinks-model");
 
 // inisialisasi router
 const drinkRouter = require("./routes/drink-routes");
-app.use("./drink", drinkRouter);
+app.use("/menu", drinkRouter);
 
 // inisialisasi server
 app.listen(port, async () => {
   await startSequelize(sequelize);
-  console.log("sever tunning on port $(port}");
+  console.log(`sever tunning on port ${port}`);
 });
